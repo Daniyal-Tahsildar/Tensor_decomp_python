@@ -3,7 +3,7 @@ import tensorly as tl
 from tensorly.decomposition import parafac
 
 
-with open("C:\\Users\\daniy\\Desktop\\data_in_file.txt", 'r') as file:
+with open("data_in_file.txt", 'r') as file:
     data = []
 
     for line in file:
@@ -22,7 +22,7 @@ with open("C:\\Users\\daniy\\Desktop\\data_in_file.txt", 'r') as file:
 
     print(tl.cp_to_tensor(factors_tl))
     
-with open("C:\\Users\\daniy\\Desktop\\data_out_file.txt", 'w') as file:
+with open("data_out_file.txt", 'w') as file:
     for row in tl.cp_to_tensor(factors_tl):
         row_str = ' '.join(map(str, row)) + '\n'
         file.write(row_str)
