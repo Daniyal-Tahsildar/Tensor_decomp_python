@@ -52,7 +52,7 @@ def write_results(Q, R):
         for row in Q:
 
             # changing values to check sbd
-            row_str = '\t'.join([f'{element:.6f}' for element in (row + 0.1)]) + '\n'
+            row_str = '\t'.join([f'{element:.6f}' for element in (row + 0.3)]) + '\n'
             file.write(row_str)
 
         file.write("R_matrix:\n")
@@ -131,3 +131,6 @@ def sbd(file_name, Q, R):
 Q,R = QR_Factor("data_in_file.txt")
 write_results(Q,R)
 sbd("data_out_file.txt", Q, R)
+
+
+
